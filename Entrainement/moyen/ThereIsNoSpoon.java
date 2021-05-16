@@ -2,57 +2,71 @@ import java.util.*;
 
 import javax.sql.rowset.serial.SerialRef;
 
+import java.io.*;
+import java.math.*;
+
+/**
+ * Don't let the machines win. You are humanity's last hope...
+ **/
 class Player {
 
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
-        int width = in.nextInt();                       // the number of cells on the X axis
-        int height = in.nextInt();                      // the number of cells on the Y axis
-        char[][] board = new char[height][width];       // make a board to represente state
+        int width = in.nextInt(); // the number of cells on the X axis
+        int height = in.nextInt(); // the number of cells on the Y axis
+        if (in.hasNextLine()) {
+            in.nextLine();
+        }
 
-        if (in.hasNextLine()) { in.nextLine(); }
+        char[][] board = new char[width][height];
 
-        // pour chaque LIGNE
-        for (int i = 0; i < height; i++) {              // Line
-            String line = in.nextLine();                // width characters, each either 0 or .
-            for (int j = 0; j < width; j++) {           // column
-                board[i][j] = line.charAt(j);
+        for (int i = 0; i < height; i++) { // pour chaque Y
+            String line = in.nextLine(); // width characters, each either 0 or .
+            for (int j = 0; j < width; j++) { // pour chaque X
+                board[j][i] = line.charAt(j);
             }
         }
 
-        StringBuilder response = new StringBuilder();
+        // reparcours le tableau et test les positions +1 et +2
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                if (board[x][y] == '0'){
+                    StringBuilder response = new StringBuilder();
+                    String coor = x + " " + y + " ";
 
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                if (board[i][j] == '0'){
-                    response.append(i + " " + j + " ");
-
-                    // Y
-                    if ((i+1) >= height){
-                        response.append("-1 -1 ");
-                    }else{
-                        if (board[i+1][j] == '0'){
-                            response.append((i+1) + " " + j + " ");
-                        }else{
-                            response.append("-1 -1 ");
+                    //X
+                    int testX = x+1;
+                    boolean checkX = false;
+                    String repX= "";
+                    while(testX < width){
+                        if (board[testX][y] == '0'){
+                            repX = testX + " " + y + " ";
+                            checkX = true;
+                            testX = width;
                         }
+                        testX++;
                     }
+                    repX = checkX ? repX : "-1 -1 ";
 
-                    // X
-                    if ((j+1) >= width) {
-                        response.append("-1 -1");
-                    }else{
-                        if (board[i][j+1] == '0'){
-                            response.append(i + " " + (j+1));
-                        }else{
-                            response.append("-1 -1");
+                    //Y
+                    int testY = y+1;
+                    boolean checkY = false;
+                    String repY= "";
+                    while(testY < height){
+                        if (board[x][testY] == '0'){
+                            repY = x + " " + testY;
+                            checkY = true;
+                            testY = height;
                         }
+                        testY++;
                     }
-                    response.append(String.format("%n"));
-                }
+                    repY = checkY ? repY : "-1 -1";
+
+
+                    System.out.println(coor + repX + repY);
+                }  
             }
         }
-
-        System.out.println(response.toString());
+        
     }
 }
