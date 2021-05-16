@@ -2,16 +2,21 @@
 
 ## Training JAVA
 ### Easy
-[x] The descent
-[x] Power of Thor  : episode 1
-[x] Cheveaux de courses
-[x] Chuck Norris
-[x] Mars Landers : episode 1
-[x] MimeType
-[x] Temperature
-[x] ASCII Art
+The descent
+Power of Thor  : episode 1
+Cheveaux de courses
+Chuck Norris
+Mars Landers : episode 1
+MimeType
+Temperature
+ASCII Art
+Défibrillateurs
+
+### Middle
+There is no spoon
+Shadows of the knight V1
 
 ## Algo Fight
 ### TicTacToe
-[x] wood to silver
+Wood to silver
 
