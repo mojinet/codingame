@@ -16,35 +16,31 @@ class Solution {
 
         for (int i = 0; i < L-1; i++) {
             System.err.println(line);
-            line = getNext(line);            
+            line = getNext(line.split(" "));            
         }
 
-        String response = "";
-        for (int i = 0; i < line.length(); i++) {
-            if (i != line.length()-1){
-                response += line.charAt(i) + " ";
-            }else{
-                response += line.charAt(i);
-            }
-        }
-
-        System.out.println(L==1?R:response);
+        System.out.println(L==1?R:line.trim());
     }
 
-    public static String getNext(String line){
+    public static String getNext(String[] array){
         StringBuilder str = new StringBuilder();
+        int[] line = new int[array.length];
+        
+        for (int i = 0; i < array.length; i++) {
+            line[i] = Integer.parseInt(array[i]);
+        }
 
-        for (int i = 0; i < line.length(); i++) {
+        for (int i = 0; i < line.length; i++) {
             int count = 1;
-            char test = line.charAt(i);
+            int test = line[i];
 
-            while (i+1 < line.length() && line.charAt(i) == line.charAt(i+1)){
+            while (i+1 < line.length && line[i] == line[i+1]){
                 count++;
                 i++;
             }
-            str.append(count + "" + test);
-        }
 
+            str.append(count + " " + test + " ");
+        }
         return str.toString();
     }
 }
