@@ -1,23 +1,23 @@
 # My source code in codingGame.com
 
-## Training JAVA
+## Training 
 ### Easy 
-- The descent
-- Power of Thor  : episode 1
-- Cheveaux de courses
-- Chuck Norris
-- Mars Landers : episode 1
-- MimeType
-- Temperature
-- ASCII Art
-- Défibrillateurs
+- The descent ```java``` ```js``` 
+- Power of Thor  : episode 1 ```java```
+- Cheveaux de courses ```java```
+- Chuck Norris ```java```
+- Mars Landers : episode 1 ```java```
+- MimeType ```java```
+- Temperature ```java```
+- ASCII Art ```java```
+- Défibrillateurs ```java```
 
 ### Middle
-- There is no spoon
-- Shadows of the knight V1
-- Suite de Conway
-- Don't panic V1
+- There is no spoon ```java```
+- Shadows of the knight V1 ```java```
+- Suite de Conway ```java```
+- Don't panic V1 ```java```
 
 ## Algo Fight
 ### TicTacToe
-- Wood to silver
+- Wood to silver ```java```
