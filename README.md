@@ -8,7 +8,7 @@
 - Chuck Norris ```java```
 - Mars Landers : episode 1 ```java```
 - MimeType ```java```
-- Temperature ```java```
+- Temperature ```java``` ```js``` 
 - ASCII Art ```java```
 - Défibrillateurs ```java```
 
