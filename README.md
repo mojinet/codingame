@@ -3,7 +3,7 @@
 ## Training 
 ### Easy 
 - The descent ```java``` ```js``` 
-- Power of Thor  : episode 1 ```java```
+- Power of Thor  : episode 1 ```java``` ```js``` 
 - Cheveaux de courses ```java```
 - Chuck Norris ```java```
 - Mars Landers : episode 1 ```java```
